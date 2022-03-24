@@ -1,11 +1,77 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta htto-equiv="content-type" content="text/html">
-    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html">
+    <meta charset="utf-8"/>
     <title>Formulario</title>
   </head>
   <body>
+    <!-- Method = post o get. Post para mandar informacion en el cuerpo del mesaje.Codigicado por el protocolo http.
+  Se envia al back lo recibe un archivo php (por ejemplo) tenemos que indicar que archivo lo recibe
+Get para mandar informacion en la cabecera del mensaje es decir lo puedde leer todo el mundo, no es apto para contraseñas
+Action, tenemos que indiccar el archivo que lo recibe-->
+    <form method="get" action ="procesamiento.php"
+      <p>
+      <label for="idUsuario">
+        Usuario:
+      </label>
+      <input type="text" name="usuario" value="jose "id="idUsuario" placeholder="nombre de usuario"><br/>
+      <label for="idContrasenia">
+        Contraseña:
+      </label>
+        <input type="password" name="contrasena" id="idContrasena" placeholder="Contraseña"><br/>
+        <label for="idfechaNac">
+          Fecha de nacimiento:
+        </label>
+        <input type="date" name="fechaNac" id="idFechaNac"/><br/>
+      </p>
+      <p>
+        Elige tu género:<br/>
+      <input type="radio" name="genero" value="hombre" id="idHombre">
+      <label for="idHombre">Hombre</label><br/>
+      <input type="radio" name="genero" value="mujer" id="idMujer">
+      <label for="">Mujer</label><br/>
+      <input type="radio" name="genero" value="nb" id="idNB">
+      <label for="">No Binario</label><br/>
+      </p>
+      <p>
+        Comida favorita:<br/>
+        <input type="checkbox" name="comida[]" value="Pan" id="idPan" checked>
+        <label for="">Pan</label></br>
+        <input type="checkbox" name="comida[]" value="CarneS" id="CarneS">
+        <label for="">Carne en salsa</label></br>
+        <input type="checkbox" name="comida[]" value="Solomillo" id="idSolomillo">
+        <label for="">Solomillo</label></br>
+        <input type="checkbox" name="comida[]" value="Pescado" id="idPescado">
+        <label for="">Pescado</label></br>
+        <input type="checkbox" name="comida[]" value="Macarrones" id="idMacarrones">
+        <label for="">Macarrones</label></br>
+        <input type="checkbox" name="comida[]" value="Migas con melon" id="idMigas con melon">
+        <label for="">Migas con melon</label></br>
 
+      </p>
+
+      <p>
+        <label for="idComidaFavSelect">Comida favorita</label><br>
+        <select name="ComidaFavSelect" id="idComidaFavSelect">
+          <option value="Migas">Migas</option>
+          <option value="Pizza">Pizza</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="idComidaFavLista">Comida favorita</label><br>
+        <input list="ComidaFavLista" name="NameComidaFavLista" id="idComidaFavLista"/>
+        <datalist id="ComidaFavLista">
+          <option value="Migas"/>
+          <option value="Pizza"/>
+        </datalist>
+      </p>
+
+      <p>
+        <input type="submit" value="Click aqui"></input>
+      </p>
+    </form>
   </body>
 </html>
+
